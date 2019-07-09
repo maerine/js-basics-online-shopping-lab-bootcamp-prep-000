@@ -52,10 +52,14 @@ function total() {
 function removeFromCart(item) {
   for(let i = 0; i < cart.length; i++){
     var itemObj = cart[i];
-    if()
+    
+    if(itemObj.itemName === item) {
+      cart.splice(i, 1);
+      return cart;
+    }
   }
   
-  return 
+  return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
